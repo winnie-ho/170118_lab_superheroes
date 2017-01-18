@@ -48,6 +48,15 @@ Superhero.prototype = {
         return "weapon unavailable"
       }
     }
+  },
+
+  attack: function(){
+      if(this.weaponInUse.power >0){
+      this.weaponInUse.power -= 1;
+    }
+    else{
+      return "weapon is useless!"
+    }
   }
 
 };

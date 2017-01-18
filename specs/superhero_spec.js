@@ -13,6 +13,7 @@ describe("superhero", function(){
     pizza = new Food("pizza", 10);
     rat1 = new Rat();
     sword = new Weapon("sword", 55);
+    golfball = new Weapon("golfball", 1);
   });
 
   it("superhero has attributes", function(){
@@ -69,6 +70,21 @@ describe("superhero", function(){
     superman.collectWeapon(sword);
     superman.selectWeapon(sword);
     assert.equal("sword", superman.weaponInUse.name);
+  })
+
+  it("weapon loses power when used to attack", function(){
+    superman.collectWeapon(sword);
+    superman.selectWeapon(sword);
+    superman.attack();
+    assert.equal(54, superman.weaponInUse.power);
+  })
+
+  it("weapon is useless when power is used up", function(){
+    superman.collectWeapon(golfball);
+    superman.selectWeapon(golfball);
+    superman.attack();
+    superman.attack();
+    assert.equal("weapon is useless!", superman.attack());
   })
 
 
