@@ -1,0 +1,15 @@
+{
+  "name": "superhero_lab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "superhero.js",
+  "scripts": {
+    "test": "mocha specs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^3.2.0"
+  }
+}
